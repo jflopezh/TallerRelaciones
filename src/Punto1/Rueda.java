@@ -1,6 +1,7 @@
 package Punto1;
 
 public class Rueda {
+    
     private double Diametro;
     private String Marca;
 
@@ -16,4 +17,5 @@ public class Rueda {
     public String getMarca() {
         return Marca;
     }
+    
 }

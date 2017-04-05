@@ -1,6 +1,7 @@
 package Punto1;
 
 public class Chasis {
+    
     private String Material;
     private String Tipo;
 
@@ -16,4 +17,5 @@ public class Chasis {
     public String getTipo() {
         return Tipo;
     }
+    
 }

@@ -1,6 +1,7 @@
 package Punto1;
 
 public class Motor {
+    
     private String Modelo;
     private int CaballosDeFuerza;
     private double Volumen;
@@ -22,4 +23,5 @@ public class Motor {
     public double getVolumen() {
         return Volumen;
     }
+    
 }

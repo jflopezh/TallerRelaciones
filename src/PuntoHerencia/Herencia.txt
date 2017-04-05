@@ -1,0 +1,37 @@
+A. Salida: 
+
+ Performs Person's tasks
+ Invoke Employee's
+ Performs Employee's tasks
+ Performs Faculty's tasks
+
+Esta salida se da debido a que es una cadena de herencia en la que Faculty hereda
+de Employee, y este a su vez de Person; en cada una de las clases se usa un
+un constructor que por defecto llama al constructor de la clase padre, por ello
+al hacer "new Faculty()" se llaman encadenadamente los constructores de las clases
+padre.
+
+B. Salida:
+
+G
+G 1 G 2 
+F
+G 1 F 2 G 2 
+F
+H 1 E 2 H 1 
+F
+G 1 E 2 G 1 
+
+En la primera y segunda lineas se imprime una instancia de la clase G, que es la 
+clase padre por lo tanto sus metodos son los declarados en ella. Como se puede ver,
+en las siguientes dos lineas se imprime una instancia de la clase F, que extiende de
+G; ésta clase sobreescribió los métodos "toString()" y "method2()" por eso conserva
+"method1()" de su superclase, al llamar al método "method2()", este a suvez llama
+al método "method1()" de la clase padre, pues no está sobreescrito, por eso imprime
+también "G 1 " al final de la linea. Luego se puede ver que se imprime una instancia
+de H que extiende de E, que no sobresescribió el método "toString()" y por eso se
+imprime el método de su superclase, el cual retorna "F" para ser impreso en la 
+primera parte, luego imprime sus métodos, pero como no redefinió el método "method2()",
+ejecuta el de su clase padre. Finalmente se imprime un objeto de la clase E, el
+cual no sobreescribió el método "toString()" y por eso imprime el de su clase padre.
+Y redefinió el segundo método más no el primero, por ello el resultado obtenido.
